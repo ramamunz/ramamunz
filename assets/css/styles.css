@@ -607,3 +607,136 @@ body.dark-theme {
     margin: 4.5rem 0 2.5rem;
   }
 }
+
+/* Styling khusus untuk bagian About */
+.about__container {
+  display: flex;
+  flex-direction: column; /* biar stack ke bawah di HP */
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0; /* hapus padding bawaan */
+  background: transparent; /* hilangkan warna background */
+  box-shadow: none; /* hilangkan bayangan */
+  border-radius: 0; /* sudut lurus */
+}
+
+.about__image {
+  display: flex;
+  justify-content: center;
+}
+
+.about__img {
+  width: 180px;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.about__data {
+  text-align: justify; /* teks rapi kiri-kanan */
+  max-width: 700px;
+}
+
+.about__title {
+  text-align: center; /* judul tetap tengah */
+}
+
+.about__list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.about__list li {
+  margin-bottom: 0.5rem;
+}
+
+.about__description {
+  line-height: 1.6; /* jarak antar baris lebih rapi */
+}
+
+
+@media screen and (max-width: 768px) {
+  .about__container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+/* Career Section */
+.career__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.career__card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 0; /* tanpa border, padding minimal */
+  background: transparent; /* full transparan */
+  box-shadow: none;         
+}
+
+.career__logo img {
+  width: 100px;       /* Ukuran kecil & konsisten */
+  height: 100px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.career__info {
+  flex: 1;
+}
+
+.career__position {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.career__company {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.career__meta {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+.career__responsibilities summary {
+  cursor: pointer;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.career__responsibilities ul {
+  padding-left: 1.2rem;
+  margin-top: 0.25rem;
+}
+
+/* Mode gelap */
+body.dark-theme .career__company,
+body.dark-theme .career__meta {
+  color: rgba(255,255,255,0.8);
+}
+
+.section-divider {
+  border: none;
+  border-top: 1px solid currentColor;
+  opacity: 0.2; /* bikin tipis tapi tetap pakai warna teks */
+  margin: 1.5rem 0;
+}
+
+.career__position a {
+  text-decoration: none;
+  color: inherit;
+}
+.career__position a:hover {
+  text-decoration: underline;
+}
